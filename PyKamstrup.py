@@ -275,14 +275,14 @@ if __name__ == "__main__":
 		#print("log: "+buf)
 
 	#Address to MQTT Broker eg Home assistant server
-	broker = "192.168.50.213"
+	broker = "IP-ADRESS-TO-BROKER"
 	#Name the client
 	client = mqtt.Client("Energy_Script")
 	#Run function upon connection with MQTT broker, for debug etc
  	#client.on_connect=on_connect
   	#client.on_log=on_log
 	#Username and token from MQTT Broker addon in home assistant
-	client.username_pw_set("homeassistant", "ahvuLoh0aLaet9liezahxiet8Gah4uo1Gooxu5eeche1yiemie4ai6Jah6ti6ieR")
+	client.username_pw_set("homeassistant_username", "Long_lived_Token_from_Broker")
 	#connect to broker change to applicable port on MQTT broker 1883 is what i am using
  	client.connect(broker, 1883)
 	client.loop_start()
